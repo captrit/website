@@ -1,0 +1,20 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 190C100 190 175 155 175 100V40L100 15L25 40V100C25 155 100 190 100 190Z" stroke="#45C6F5" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M100 165C100 165 155 140 155 100V55L100 35L45 55V100C45 140 100 165 100 165Z" stroke="#45C6F5" stroke-width="4" stroke-opacity="0.5" stroke-linejoin="round"/>
+  <path d="M70 100L90 120L130 80" stroke="#45C6F5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Additional cybersecurity elements -->
+  <circle cx="100" cy="100" r="40" stroke="#45C6F5" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="4 4"/>
+  
+  <!-- Digital circuit pattern -->
+  <path d="M60 140H140" stroke="#45C6F5" stroke-width="1" stroke-opacity="0.4"/>
+  <path d="M60 140V130" stroke="#45C6F5" stroke-width="1" stroke-opacity="0.4"/>
+  <path d="M140 140V130" stroke="#45C6F5" stroke-width="1" stroke-opacity="0.4"/>
+  <path d="M100 140V130" stroke="#45C6F5" stroke-width="1" stroke-opacity="0.4"/>
+  <path d="M80 140V150" stroke="#45C6F5" stroke-width="1" stroke-opacity="0.4"/>
+  <path d="M120 140V150" stroke="#45C6F5" stroke-width="1" stroke-opacity="0.4"/>
+  
+  <!-- Lock icon -->
+  <rect x="90" y="50" width="20" height="15" rx="2" stroke="#45C6F5" stroke-width="2" stroke-opacity="0.7"/>
+  <path d="M95 50V40C95 35 100 30 105 30C110 30 115 35 115 40V50" stroke="#45C6F5" stroke-width="2" stroke-opacity="0.7"/>
+</svg> 

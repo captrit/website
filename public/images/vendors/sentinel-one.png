@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-7f7a0b93139dcf56f90",applicationID:"773889139"};;/*! For license information please see nr-loader-rum-1.291.1.min.js.LICENSE.txt */
+(()=>{var e,t,r={122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let o in a)if(void 0!==e[o])try{if(null===e[o]){r[o]=null;continue}Array.isArray(e[o])&&Array.isArray(t[o])?r[o]=Array.from(new Set([...e[o],...t[o]])):"object"==typeof e[o]&&"object"==typeof t[o]?r[o]=i(e[o],t[o]):r[o]=e[o]}catch(e){r[o]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},555:(e,t,r)=>{"use strict";r.d(t,{D:()=>s,f:()=>o});var n=r(384),i=r(122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function o(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const s=e=>(0,i.a)(e,a)},324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.291.1",i="PROD",a="CDN"},154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>d,bv:()=>a,gm:()=>o,mw:()=>s,sb:()=>u});var n=r(863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),o=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===o?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(o.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)())},241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(836),i=r(606),a=r(860),o=r(646);const s={};function c(e,t){const r={staged:!1,priority:a.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),g(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),g(e,t)})))}function g(e,t,r=!0){const a=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!a.aborted&&a.backlog&&s){if(r){const e=a.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof o.y&&t[0].on(e,t[1])}))}))}}a.isolatedBacklog||delete s[t],a.backlog[t]=null,a.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}}))}},836:(e,t,r)=>{"use strict";r.d(t,{P:()=>s,ee:()=>c});var n=r(384),i=r(990),a=r(646),o=r(607);const s="nr@context:".concat(o.W),c=function e(t,r){var n={},o={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);for(var s=g(n),u=m(e),d=u.length,l=0;l<d;l++)u[l].apply(s,r);var p=v()[o[e]];p&&p.push([f,e,r,s]);return s},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{o[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[o[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,s,(()=>new a.y(s))):new a.y(s)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c)},646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(908);a.on=o;var i=a.handlers={};function a(e,t,r,a){o(a||n.d,i,e,t,r)}function o(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var o=t[a]=t[a]||{};(o[r]=o[r]||[]).push([e,i])}},878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(566).bz)()},566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,bz:()=>o});var n=r(154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function o(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const o=[];for(var s=0;s<e;s++)o.push(a(r,i++).toString(16));return o.join("")}},614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>o,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,o=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>o});var n=r(241);const i=new Set,a={};function o(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>a,sB:()=>o});var n=r(878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(i())return e();(0,n.sp)("load",e,t)}function o(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>a,US:()=>u,Zm:()=>o,bQ:()=>c,dV:()=>s,pV:()=>d});var n=r(154),i=r(863);const a={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function o(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=o();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=o();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e,t){o()[e]=t}function d(){return function(){let e=o();const t=e.info||{};e.info={beacon:a.beacon,errorBeacon:a.errorBeacon,...t}}(),function(){let e=o();const t=e.init||{};e.init={...t}}(),s(),function(){let e=o();const t=e.loader_config||{};e.loader_config={...t}}(),o()}},843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},773:(e,t,r)=>{"use strict";r.d(t,{z_:()=>a,XG:()=>s,TZ:()=>n,rs:()=>i,xV:()=>o});r(154),r(566),r(384);const n=r(860).K7.metrics,i="sm",a="cm",o="storeSupportabilityMetrics",s="storeEventMetrics"},630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(836),i=r(687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e){return this.#e(i.Dl,e)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(){return this.#e(i.dT)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}}},261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>u,BL:()=>s,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Tb:()=>l,U2:()=>a,V1:()=>k,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>o,nb:()=>m,o5:()=>d});const n="api-",i="addPageAction",a="addToTrace",o="addRelease",s="finished",c="interaction",u="log",d="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",k="measure"},163:(e,t,r)=>{"use strict";r.d(t,{j:()=>N});var n=r(384),i=r(741);var a=r(555);r(860).K7.genericEvents;const o="experimental.marks",s="experimental.measures",c="experimental.resources",u=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(614),l=r(944),f=r(122);const g="[data-nr-mask]",p=e=>(0,f.a)(e,(()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{allow_registered_children:!0,duplicate_registered_data:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(o)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(s)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){u(t)?e.mask_selector="".concat(t,",").concat(g):""===t||null===t?e.mask_selector=g:(0,l.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){u(t)?e.block_selector+=",".concat(t):""!==t&&(0,l.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,l.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var m=r(154),h=r(324);let v=0;const b={buildEnv:h.F3,distMethod:h.Xs,version:h.xv,originTime:m.WN},y={appMetadata:{},customTransaction:void 0,denyList:void 0,disabled:!1,entityManager:void 0,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,get harvestCount(){return++v}},_=e=>{const t=(0,f.a)(e,y),r=Object.keys(b).reduce(((e,t)=>(e[t]={value:b[t],writable:!1,configurable:!0,enumerable:!0},e)),{});return Object.defineProperties(t,r)};var w=r(701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var k=r(836),A=r(241);const T={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},R=e=>(0,f.a)(e,T),S=new Set;function N(e,t={},r,o){let{init:s,info:c,loader_config:u,runtime:d={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();s=e.init,c=e.info,u=e.loader_config}e.init=p(s||{}),e.loader_config=R(u||{}),c.jsAttributes??={},m.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,g=[c.beacon,c.errorBeacon];S.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),g.push(f.proxy.assets)),f.proxy.beacon&&g.push(f.proxy.beacon),function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach((r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})}))}(e),(0,n.US)("activatedFeatures",w.B),e.runSoftNavOverSpa&&=!0===f.soft_navigations.enabled&&f.feature_flags.includes("soft_nav")),d.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?g:[]],d.ptid=e.agentIdentifier,d.loaderType=r,e.runtime=_(d),S.has(e.agentIdentifier)||(e.ee=k.ee.get(e.agentIdentifier),e.exposed=l,(0,A.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),S.add(e.agentIdentifier)}},374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>d,K7:()=>c,P3:()=>u,XX:()=>i,Yy:()=>s,df:()=>a,qY:()=>n,v4:()=>o});const n="events",i="jserrors",a="browser/blobs",o="rum",s="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},u={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},d={[c.pageViewEvent]:o,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:s,[c.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.291.1.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.291.1.PROD:",i.l=(r,n,a,o)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==a)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){s=l;break}}if(!s){c=!0;var f={296:"sha512-K5yGU0xfjdEu+jAsDNEpxjfzdaSdS93OBpRXVC63TC1iXJnzNn5Qltt3ZuNl6CF37U62pUJ5KGbAE7G/p4KpPg=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+a),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[o]&&(s.integrity=f[o])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=a);var o=i.p+i.u(t),s=new Error;i.l(o,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),o=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+a+": "+o+")",s.name="ChunkLoadError",s.type=a,s.request=o,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[o,s,c]=r,u=0;if(o.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<o.length;u++)a=o[u],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.291.1.PROD"]=self["webpackChunk:NRBA-1.291.1.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(374);var e=i(566),t=i(741);class r extends t.W{agentIdentifier=(0,e.LA)(16)}var n=i(860);const a=Object.values(n.K7);var o=i(163);var s=i(908),c=i(863),u=i(261),d=i(241),l=i(944),f=i(701),g=i(773);function p(e,t,i,a){const o=a||i;!o||o[e]&&o[e]!==r.prototype[e]||(o[e]=function(){(0,s.p)(g.xV,["API/"+e+"/called"],void 0,n.K7.metrics,i.ee),(0,d.W)({agentIdentifier:i.agentIdentifier,drained:!!f.B?.[i.agentIdentifier],type:"data",name:"api",feature:u.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,l.R)(23,e)}})}function m(e,t,r,n,i){const a=e.info;null===r?delete a.jsAttributes[t]:a.jsAttributes[t]=r,(i||null===r)&&(0,s.p)(u.Pl+n,[(0,c.t)(),t,r],void 0,"session",e.ee)}var h=i(687),v=i(234),b=i(289),y=i(154),_=i(384);const w=e=>y.RI&&!0===e?.privacy.cookies_enabled;function x(e){return!!(0,_.dV)().o.MO&&w(e)&&!0===e?.session_trace.enabled}var k=i(389);class A extends v.W{constructor(e,t){super(e.agentIdentifier,t),this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise(((t,r)=>{this.ee.on("manual-start-all",(0,k.J)((()=>{(0,h.Ak)(e.agentIdentifier,this.featureName),t()})))})):(0,h.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;let a;this.onAggregateImported=new Promise((e=>{a=e}));const o=async()=>{let o;await this.deferred;try{if(w(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,663));o=t(e)}}catch(e){(0,l.R)(20,e),this.ee.emit("internal-error",[e]),this.featureName===n.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o,e.init))return(0,h.Ze)(this.agentIdentifier,this.featureName),void a(!1);const{Aggregate:n}=await t();this.featAggregate=new n(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),a(!0)}catch(e){(0,l.R)(34,e),this.abortHandler?.(),(0,h.Ze)(this.agentIdentifier,this.featureName,!0),a(!1),this.ee&&this.ee.abort()}};y.RI?(0,b.GG)((()=>o()),!0):o()}#t(e,t,r){switch(e){case n.K7.sessionReplay:return x(r)&&!!t;case n.K7.sessionTrace:return!!t;default:return!0}}}var T=i(630);class R extends A{static featureName=T.T;constructor(e){var t;super(e,T.T),t=e,p(u.Fw,(function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,s.p)(u.Pl+u.Fw,[(0,c.t)()],void 0,void 0,t.ee))}),t),this.ee.on("api-send-rum",((e,t)=>(0,s.p)("send-rum",[e,t],void 0,this.featureName,this.ee))),this.importAggregator(e,(()=>i.e(296).then(i.bind(i,108))))}}var S=i(843),N=i(878),E=i(782);class j extends A{static featureName=E.T;constructor(e){super(e,E.T),y.RI&&((0,S.u)((()=>(0,s.p)("docHidden",[(0,c.t)()],void 0,E.T,this.ee)),!0),(0,N.sp)("pagehide",(()=>(0,s.p)("winPagehide",[(0,c.t)()],void 0,E.T,this.ee))),this.importAggregator(e,(()=>i.e(296).then(i.bind(i,350)))))}}class I extends A{static featureName=g.TZ;constructor(e){super(e,g.TZ),y.RI&&document.addEventListener("securitypolicyviolation",(e=>{(0,s.p)(g.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)})),this.importAggregator(e,(()=>i.e(296).then(i.bind(i,373))))}}new class extends r{constructor(e){var t;(super(),y.gm)?(this.features={},(0,_.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===n.K7.softNav)),(0,o.j)(this,e,e.loaderType||"agent"),t=this,p(u.cD,(function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return m(t,e,r,u.cD,n);(0,l.R)(40,typeof r)}else(0,l.R)(39,typeof e)}),t),function(e){p(u.Dl,(function(t){if("string"==typeof t||null===t)return m(e,"enduser.id",t,u.Dl,!0);(0,l.R)(41,typeof t)}),e)}(this),function(e){p(u.nb,(function(t){if("string"==typeof t||null===t)return m(e,"application.version",t,u.nb,!1);(0,l.R)(42,typeof t)}),e)}(this),function(e){p(u.d3,(function(){e.ee.emit("manual-start-all")}),e)}(this),this.run()):(0,l.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return a.forEach((r=>{t[r]=!!e[r]?.enabled})),t}(this.init),t=[...this.desiredFeatures];t.sort(((e,t)=>n.P3[e.featureName]-n.P3[t.featureName])),t.forEach((t=>{if(!e[t.featureName]&&t.featureName!==n.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&t.featureName===n.K7.spa)return;if(!this.runSoftNavOverSpa&&t.featureName===n.K7.softNav)return;const r=function(e){switch(e){case n.K7.ajax:return[n.K7.jserrors];case n.K7.sessionTrace:return[n.K7.ajax,n.K7.pageViewEvent];case n.K7.sessionReplay:return[n.K7.sessionTrace];case n.K7.pageViewTiming:return[n.K7.pageViewEvent];default:return[]}}(t.featureName).filter((e=>!(e in this.features)));r.length>0&&(0,l.R)(36,{targetFeature:t.featureName,missingDependencies:r}),this.features[t.featureName]=new t(this)}))}catch(e){(0,l.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,_.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}({features:[R,j,I],loaderType:"lite"})})()})();</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Page not found | SentinelOne</title>
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KGGXSJ');
+	</script>
+
+	<style>
+		@font-face {
+			font-family: 'Whyte';
+			src: url('/wp-content/themes/sentinelone/assets/fonts/whyte/ABCWhytePlusVariable.woff2') format('woff2'),
+				url('/wp-content/themes/sentinelone/assets/fonts/whyte/ABCWhytePlusVariable.woff') format('woff');
+			font-display: swap;
+			font-feature-settings: "ss01" on;
+		}
+	</style>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Whyte', sans-serif;
+		}
+
+		body {
+			background-color: #fff;
+			color: #333;
+			line-height: 1.6;
+			position: relative;
+			min-height: 100vh;
+		}
+
+		.header {
+			display: flex;
+			justify-content: start;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 20px;
+			padding-left: 0;
+			background-color: white;
+		}
+
+
+		@media (max-width: 640px) {
+			.header {
+				padding-left: 20px;
+			}
+		}
+
+
+		.logo {
+			height: 46px;
+		}
+
+		@media (max-width: 768px) {
+			.logo {
+				height: 38px;
+			}
+		}
+
+		.hero {
+			background: linear-gradient(to right, #191856, #060a3b, #060939, #080839, #0d083c, #130840, #170944, #170942, #15083e, #12093d, #130d41, #16124b, #191856, #25236a, #3d358b, #654db9);
+			color: white;
+			padding: 140px 20px;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		@media (max-width: 768px) {
+			.hero {
+				padding: 80px 20px;
+			}
+		}
+
+		.hero::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+			background-size: 30px 30px;
+			opacity: 0.5;
+			z-index: 1;
+		}
+
+		.hero-content {
+			position: relative;
+			z-index: 2;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.hero h1 {
+			margin-bottom: 24px;
+			color: #FFF;
+			text-align: center;
+			font-size: 85px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 100%;
+			letter-spacing: -2.55px;
+		}
+
+		.hero p {
+			max-width: 600px;
+			margin: 0 auto;
+			color: #FFF;
+			text-align: center;
+			font-size: 22px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 28px;
+		}
+
+		.cards-section {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 16px;
+			padding-top: 84px;
+			padding-bottom: 84px;
+		}
+
+		@media (max-width: 1200px) {
+			.cards-section {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.cards-section .card:nth-child(3) {
+				grid-column: 1 / -1;
+				justify-self: center;
+			}
+		}
+
+		@media (max-width: 800px) {
+			.cards-section {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		.card {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			background: white;
+			padding: 40px;
+			padding-top: 52px;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			border-radius: 10px;
+			background: #FFF;
+			box-shadow: 0px 3px 15px 0px rgba(38, 49, 209, 0.20);
+		}
+
+		@media (max-width: 800px) {
+			.card {
+				padding: 20px;
+				padding-top: 28px;
+			}
+		}
+
+		.card h2 {
+			margin-bottom: 24px;
+			color: #0B0C1B;
+			font-size: 27px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 32px;
+		}
+
+		.card p {
+			margin-bottom: 30px;
+			flex-grow: 1;
+			min-height: 120px;
+			color: #5A5C76;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 350;
+			line-height: 26px;
+		}
+
+		.footer {
+			background-color: #fff;
+			padding: 37px 20px;
+			border-top: 1px solid #DFE1EF;
+			width: 100%;
+		}
+
+		@media (min-width: 768px) {
+			.footer {
+				position: absolute;
+			}
+		}
+
+		.footer-top {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.footer-logo {
+			height: 24px;
+		}
+
+		@media (max-width: 768px) {
+			.hero h1 {
+				font-size: 3rem;
+			}
+
+			.cards-section {
+				padding: 40px 20px;
+			}
+
+			.card {
+				max-width: 100%;
+			}
+		}
+
+		.footer {
+			background-color: #fff;
+			padding: 37px 20px;
+			border-top: 1px solid #DFE1EF;
+		}
+
+		.footer-legal {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+			font-size: 12px;
+			color: #666;
+		}
+
+		.footer-link {
+			color: #666;
+			text-decoration: none;
+		}
+
+		.footer-link:hover {
+			color: #5a17d6;
+			text-decoration: none;
+		}
+
+		.footer-logo-container {
+			display: flex;
+			justify-content: center;
+		}
+
+		.footer-logo-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.footer-logo {
+			height: 30px;
+			margin-bottom: 5px;
+		}
+
+		.tagline {
+			font-size: 12px;
+			color: #666;
+		}
+
+		.social-icons {
+			display: flex;
+			gap: 44px;
+		}
+
+		.social-icon {
+			color: #333;
+			text-decoration: none;
+			font-size: 18px;
+		}
+
+		.social-icon:hover {
+			color: #5a17d6;
+			text-decoration: none;
+		}
+
+		@media (max-width: 768px) {
+			.footer-legal {
+				align-items: center;
+				order: 3;
+			}
+
+			.footer-logo-container {
+				order: 1;
+			}
+
+			.social-icons {
+				order: 2;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.hero h1 {
+				font-size: 3rem;
+			}
+
+			.cards-section {
+				padding: 40px 20px;
+			}
+
+			.card {
+				max-width: 100%;
+			}
+		}
+
+		.footer-link-wrapper {
+			display: flex;
+			justify-content: center;
+			column-gap: .5rem;
+		}
+
+
+		.container--whyte {
+			max-width: calc(1640px + 8.75rem);
+			margin: 0 auto;
+		}
+
+		.container--whyte .inner {
+			margin: 0 4.375rem
+		}
+
+		@media (max-width: 1400px) {
+			.container--whyte .inner {
+				margin: 0 2.5rem
+			}
+		}
+
+		@media (max-width: 640px) {
+			.container--whyte .inner {
+				margin: 0 1.25rem
+			}
+		}
+
+		footer:not(.disclaimer) .inner {
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			gap: 3rem;
+			justify-content: space-between;
+			position: relative
+		}
+
+		@media (max-width: 640px) {
+			footer .inner {
+				justify-content: center !important;
+			}
+		}
+	</style>
+
+
+	<!-- buttons -->
+	<style>
+		.cta-wrap .cta {
+			position: relative;
+			text-decoration: none;
+		}
+
+		.cta-wrap .cta.arrow {
+			background: transparent;
+			color: inherit;
+			font-size: 20px;
+			font-weight: 350;
+			letter-spacing: unset;
+			line-height: 1.22;
+			text-decoration: none;
+			text-transform: none;
+			display: flex;
+			align-items: center;
+			padding: 0;
+			width: max-content;
+		}
+
+		.cta-wrap .cta.arrow svg {
+			position: relative;
+			right: -1px;
+			transition: right 0.2s ease;
+		}
+
+		.cta-wrap .cta.arrow span {
+			background: none;
+			padding-right: 10px;
+		}
+
+		.cta-wrap .cta.arrow:hover {
+			box-shadow: none;
+		}
+
+		.cta-wrap .cta.arrow:hover svg {
+			right: -5px;
+		}
+
+		.cta-wrap .cta.filled.dark:hover {
+			background-color: #6100ff;
+		}
+
+
+		.cta-wrap .cta.filled {
+			border-radius: 40px;
+			color: #fff;
+			font-size: 20px;
+			line-height: 1;
+			padding: 12px 24px;
+			font-weight: 350;
+			transition: 0.2s background-color ease, 0.2s color ease;
+		}
+
+		.cta-wrap .cta.filled svg path {
+			transition: 0.2s fill ease;
+		}
+
+		.cta-wrap .cta.filled.dark {
+			background-color: #0B0C1B;
+		}
+
+		.cta-wrap .cta.filled.dark svg path {
+			fill: #fff;
+		}
+
+		.cta-wrap .cta.dot {
+			padding: 0 0 0 2rem;
+		}
+
+		.cta-wrap .cta.dot::after {
+			background-color: #0B0C1B;
+			border-radius: 60px;
+			content: '';
+			height: 45px;
+			position: absolute;
+			right: 0;
+			width: 45px;
+			transition: 0.2s width ease;
+			right: 4px;
+		}
+
+		.cta-wrap .cta.dot>div {
+			align-items: center;
+			border-radius: 50%;
+			display: flex;
+			height: 45px;
+			justify-content: center;
+			width: 45px;
+			z-index: 2;
+		}
+
+		.cta-wrap .cta.dot svg {
+			transition: 0.2s transform ease;
+		}
+
+		.cta-wrap .cta.dot:hover::after {
+			width: calc(100% - 8px);
+		}
+
+		.cta-wrap .cta.dot:hover svg {
+			right: unset;
+		}
+
+		.dot {
+			padding: 0 0 0 2rem;
+			z-index: 2;
+		}
+
+		.dot::after {
+			border-radius: 30px;
+			content: '';
+			height: 45px;
+			position: absolute;
+			right: 4px;
+			width: 45px;
+			transition: 0.2s width ease;
+		}
+
+		.dot>div {
+			align-items: center;
+			border-radius: 30px;
+			display: flex;
+			height: 45px;
+			justify-content: center;
+			margin: 4px;
+			width: 45px;
+			z-index: 2;
+		}
+
+		.dot span {
+			position: relative;
+			transition: 0.2s color ease;
+			z-index: 2;
+		}
+
+		.dot svg {
+			transition: 0.2s transform ease;
+		}
+
+		.dot.dark {
+			border: 1px solid #dfe1ef;
+			border-radius: 30px;
+			background: rgba(239, 240, 250, 0.50);
+			backdrop-filter: blur(20px);
+		}
+
+		.dot.dark span {
+			padding-right: 45px;
+		}
+
+		.dot.dark::after {
+			background-color: #0B0C1B;
+		}
+
+		.dot.dark:hover span {
+			color: #fff;
+		}
+
+		.dot.dark:hover svg {
+			transform: rotate(0deg);
+		}
+
+		.dot.dark svg {
+			transform: rotate(-45deg);
+		}
+
+		.dot.dark svg path {
+			fill: #fff;
+		}
+
+		.dot:hover::after {
+			width: calc(100% - 8px);
+		}
+
+		.dot:hover svg {
+			right: unset;
+		}
+	</style>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			// Define translations for different locales
+			const translations = {
+				'en': {
+					title: '404: Page not found',
+					subtitle: 'This page is no longer available, or does not exist.'
+				},
+				'de': {
+					title: 'Fehler! Leider konnten wir diese Seite nicht finden.',
+					subtitle: ''
+				},
+				'fr': {
+					title: 'Désolé, la page demandée est introuvable.',
+					subtitle: ''
+				},
+				'nl': {
+					title: 'Oeps! We kunnen die pagina niet vinden!',
+					subtitle: ''
+				},
+				'it': {
+					title: 'Ops! Non abbiamo trovato la pagina!',
+					subtitle: ''
+				},
+				'es': {
+					title: 'Página no encontrada',
+					subtitle: ''
+				},
+				'jp': {
+					title: '404',
+					subtitle: ''
+				},
+				'kr': {
+					title: '죄송합니다! 페이지를 찾을 수 없습니다!',
+					subtitle: ''
+				}
+			};
+
+			// Map domains to locales
+			const domainLocaleMap = {
+				'de.sentinelone.com': 'de',
+				'fr.sentinelone.com': 'fr',
+				'nl.sentinelone.com': 'nl',
+				'it.sentinelone.com': 'it',
+				'es.sentinelone.com': 'es',
+				'jp.sentinelone.com': 'jp',
+				'kr.sentinelone.com': 'kr'
+			};
+
+			// Get the current domain
+			const currentDomain = window.location.hostname;
+
+			// Determine the locale based on the domain or default to English
+			const locale = domainLocaleMap[currentDomain] || 'en';
+
+			// Get the title and subtitle elements
+			const titleElement = document.getElementById('404-title');
+			const subtitleElement = document.getElementById('404-subtitle');
+
+			// Update the text based on the locale
+			if (translations[locale]) {
+				titleElement.textContent = translations[locale].title;
+				subtitleElement.textContent = translations[locale].subtitle;
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<!-- Header with logo -->
+	<div class="container--whyte">
+		<div class="inner">
+			<header class="header">
+				<a href="/">
+					<svg xmlns="http://www.w3.org/2000/svg" width="240" height="46" viewBox="0 0 240 46" fill="none">
+						<g clip-path="url(#clip0_530_17508)">
+							<path d="M63.325 20.7693C59.411 20.0243 57.5195 19.6194 57.5195 17.6905C57.5195 15.8636 59.1082 14.9485 61.2651 14.9485C63.7316 14.9485 65.2489 16.3382 65.4547 18.3335H70.4539C70.3519 13.7986 66.841 10.8882 61.2719 10.8882C55.7028 10.8882 52.4573 13.8683 52.4573 18.0664C52.4573 22.8718 55.9359 24.1271 59.9519 24.9045C63.9017 25.6835 65.8289 26.0867 65.8289 28.0837C65.8289 29.9446 64.1058 30.9583 61.7788 30.9583C58.8769 30.9583 57.0534 29.3662 56.885 27.0664L51.8892 27.0001C51.9555 31.8055 55.7045 34.988 61.7159 34.988C67.2526 34.988 70.8979 31.9449 70.9336 27.5087C70.9336 22.7374 67.353 21.5161 63.3369 20.7744L63.3233 20.7659V20.771L63.325 20.7693Z" fill="black" />
+							<path d="M101.754 17.1767C99.0565 17.1767 97.2908 19.1788 96.4998 21.5585H95.2479L96.3536 19.0717C96.5883 18.5426 96.7108 17.9711 96.7108 17.3928H91.2642V34.7804H96.0389V25.8774C96.0389 22.8649 97.4609 21.1027 99.9308 21.1027C102.401 21.1027 103.45 22.6608 103.45 25.6035V34.777H108.225V25.0269C108.225 19.104 105.347 17.1733 101.759 17.1733H101.758L101.754 17.1767Z" fill="black" />
+							<path d="M140.544 17.1767C137.846 17.1767 136.081 19.1788 135.29 21.5585H134.038L135.143 19.0717C135.378 18.5426 135.501 17.9711 135.501 17.3928H130.052V34.7804H134.827V25.8774C134.827 22.8649 136.249 21.1027 138.719 21.1027C141.189 21.1027 142.238 22.6608 142.238 25.6035V34.777H147.013V25.0269C147.013 19.104 144.135 17.1733 140.546 17.1733H140.544V17.1767Z" fill="black" />
+							<path d="M127.606 17.3911H122.816V34.7788H127.608V17.3911H127.606Z" fill="black" />
+							<path d="M172.565 10.4221L167.804 12.8239V34.7805H172.565V10.4221Z" fill="black" />
+							<path d="M127.608 11.2878H122.816V16.0796H127.608V11.2878Z" fill="black" />
+							<path d="M116.616 17.391V11.23L111.853 13.6318V17.391H108.985V21.4122H111.853V32.2272C111.853 33.6356 112.996 34.7787 114.405 34.7787H120.6V30.7541H116.616V21.4122H120.6V17.391H116.616Z" fill="black" />
+							<path d="M148.5 26.1121C148.5 20.6961 152.053 17.1768 157.435 17.1768C162.817 17.1768 166.168 20.4257 166.202 25.5372C166.202 26.0441 166.168 26.6207 166.066 27.1617H153.475V27.3981C153.577 29.8697 155.167 31.358 157.571 31.358C159.466 31.358 160.82 30.5126 161.26 28.8865H165.965C165.425 32.2715 162.412 34.9795 157.741 34.9795C151.953 34.9795 148.5 31.4924 148.5 26.1104V26.1121ZM161.397 24.0471C161.092 21.9141 159.602 20.7302 157.471 20.7302C155.339 20.7302 153.849 21.9821 153.579 24.0471H161.398H161.397Z" fill="black" />
+							<path d="M211.911 17.1767C209.213 17.1767 207.448 19.1788 206.657 21.5585H205.405L206.511 19.0717C206.745 18.5426 206.868 17.9711 206.868 17.3928H201.419V34.7804H206.194V25.8774C206.194 22.8649 207.616 21.1027 210.086 21.1027C212.556 21.1027 213.605 22.6608 213.605 25.6035V34.777H218.38V25.0269C218.38 19.104 215.502 17.1733 211.913 17.1733H211.911V17.1767Z" fill="black" />
+							<path d="M219.867 26.1121C219.867 20.6961 223.42 17.1768 228.802 17.1768C234.184 17.1768 237.535 20.4257 237.569 25.5372C237.569 26.0441 237.535 26.6207 237.433 27.1617H224.842V27.3981C224.944 29.8697 226.535 31.358 228.938 31.358C230.833 31.358 232.187 30.5126 232.628 28.8865H237.333C236.792 32.2715 233.779 34.9795 229.108 34.9795C223.32 34.9795 219.867 31.4924 219.867 26.1104V26.1121ZM232.764 24.0471C232.459 21.9141 230.969 20.7302 228.838 20.7302C226.706 20.7302 225.216 21.9821 224.946 24.0471H232.765H232.764Z" fill="black" />
+							<path d="M72.1245 26.1121C72.1245 20.6961 75.6779 17.1768 81.0599 17.1768C86.4419 17.1768 89.7929 20.4257 89.8269 25.5372C89.8269 26.0441 89.7929 26.6207 89.6908 27.1617H77.1V27.3981C77.202 29.8697 78.7925 31.358 81.196 31.358C83.0909 31.358 84.4449 30.5126 84.8855 28.8865H89.5904C89.0495 32.2715 86.037 34.9795 81.3661 34.9795C75.5776 34.9795 72.1245 31.4924 72.1245 26.1104V26.1121ZM85.0215 24.0471C84.7171 21.9141 83.227 20.7302 81.0956 20.7302C78.9643 20.7302 77.4742 21.9821 77.2037 24.0471H85.0232H85.0215Z" fill="black" />
+							<path d="M187.73 34.983C180.761 34.983 175.714 29.8408 175.714 22.9381C175.714 16.0355 180.761 10.8933 187.73 10.8933C194.699 10.8933 199.821 16.0355 199.821 22.9381C199.821 29.8408 194.699 34.983 187.73 34.983ZM187.73 30.6862C191.688 30.6862 194.61 27.405 194.61 22.9381C194.61 18.4713 191.688 15.1901 187.73 15.1901C183.772 15.1901 180.89 18.4713 180.89 22.9381C180.89 27.405 183.738 30.6862 187.73 30.6862Z" fill="black" />
+							<path d="M237.71 16.2361H238.335C238.672 16.2361 238.898 16.4351 238.898 16.7464C238.898 16.9437 238.796 17.1002 238.636 17.1767L238.939 17.767H238.575L238.316 17.2533H238.04V17.767H237.712V16.2344L237.71 16.2361ZM238.039 16.5082V16.9794H238.308C238.462 16.9794 238.561 16.8876 238.561 16.7447C238.561 16.6018 238.462 16.5082 238.308 16.5082H238.039Z" fill="black" />
+							<path d="M238.265 18.5698C237.416 18.5698 236.727 17.8792 236.727 17.0321C236.727 16.185 237.418 15.4944 238.265 15.4944C239.112 15.4944 239.802 16.185 239.802 17.0321C239.802 17.8792 239.112 18.5698 238.265 18.5698ZM238.265 15.8227C237.598 15.8227 237.055 16.3653 237.055 17.0321C237.055 17.6989 237.598 18.2415 238.265 18.2415C238.932 18.2415 239.474 17.6989 239.474 17.0321C239.474 16.3653 238.932 15.8227 238.265 15.8227Z" fill="black" />
+							<path d="M18.4663 9.10208L36.6313 18.1838V9.08337L18.4663 0V9.10208Z" fill="url(#paint0_linear_530_17508)" />
+							<path d="M18.4663 36.308L36.6313 27.2246V36.3267L18.4663 45.4101V36.308Z" fill="url(#paint1_linear_530_17508)" />
+							<path d="M18.4663 9.10208L0.30127 18.1838V9.08337L18.4663 0V9.10208Z" fill="url(#paint2_linear_530_17508)" />
+							<path d="M18.4663 36.308L0.30127 27.2246V36.3267L18.4663 45.4101V36.308Z" fill="url(#paint3_linear_530_17508)" />
+							<path d="M4.83936 20.4411L22.9908 29.5176L32.0878 24.9658L13.9448 15.8943L4.83936 20.4411Z" fill="url(#paint4_linear_530_17508)" />
+						</g>
+						<defs>
+							<linearGradient id="paint0_linear_530_17508" x1="36.5038" y1="13.5757" x2="18.4578" y2="4.54168" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#4500B6" />
+								<stop offset="1" stop-color="#6100FF" />
+							</linearGradient>
+							<linearGradient id="paint1_linear_530_17508" x1="36.5038" y1="31.8343" x2="18.4578" y2="40.8684" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#4500B6" />
+								<stop offset="1" stop-color="#6100FF" />
+							</linearGradient>
+							<linearGradient id="paint2_linear_530_17508" x1="0.428845" y1="13.5757" x2="18.4748" y2="4.54168" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#6100FF" />
+								<stop offset="1" stop-color="#4500B6" />
+							</linearGradient>
+							<linearGradient id="paint3_linear_530_17508" x1="0.428845" y1="31.8343" x2="18.4748" y2="40.8684" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#6100FF" />
+								<stop offset="1" stop-color="#4500B6" />
+							</linearGradient>
+							<linearGradient id="paint4_linear_530_17508" x1="28.155" y1="27.5547" x2="8.6258" y2="17.7773" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#6100FF" />
+								<stop offset="1" stop-color="#4500B6" />
+							</linearGradient>
+							<clipPath id="clip0_530_17508">
+								<rect width="240" height="45.41" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
+			</header>
+		</div>
+	</div>
+
+
+	<!-- Hero section with 404 message -->
+	<section class="hero">
+		<div class="hero-content">
+			<h1 id="404-title">404: Page not found</h1>
+			<p id="404-subtitle">This page is no longer available, or does not exist.</p>
+		</div>
+	</section>
+
+	<!-- Cards section -->
+	<section class="container--whyte">
+		<div class="cards-section inner">
+			<div class="card">
+				<h2>Request a Demo</h2>
+				<p>Interested in seeing us in action? Tell us about yourself and we'll connect you with a SentinelOne expert.</p>
+				<div class="cta-wrap">
+					<a class="cta wow fadeIn filled dark arrow" href="https://www.sentinelone.com/request-demo/" target="" style="visibility: visible; animation-name: fadeIn;">
+						<span>Request a Demo</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+							<path d="M12.5309 5.14V4.36C12.3042 4.33333 12.0909 4.29333 11.8909 4.24C11.6909 4.18667 11.4842 4.11333 11.2709 4.02C11.0575 3.92667 10.8575 3.82667 10.6709 3.72C10.4842 3.6 10.2975 3.44667 10.1109 3.26L8.17086 1.34L9.41086 0.14L15.2509 6L9.41086 11.88L8.17086 10.66L10.0309 8.82C10.2575 8.60667 10.4775 8.43333 10.6909 8.3C10.9042 8.16667 11.1175 8.06 11.3309 7.98C11.5309 7.9 11.7309 7.83333 11.9309 7.78C12.1309 7.71333 12.3309 7.67333 12.5309 7.66V6.88L0.0308594 6.88L0.0308594 5.14L12.5309 5.14Z" fill="white"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+
+			<div class="card">
+				<h2>Learn About Our Platform</h2>
+				<p>Singularity™ enables unfettered visibility, industry-leading detection, and autonomous response. Discover the power of autonomous cybersecurity.</p>
+				<div class="cta-wrap">
+					<a class="cta wow fadeIn filled dark arrow" href="https://www.sentinelone.com/platform/" target="" style="visibility: visible; animation-name: fadeIn;">
+						<span>See the Platform</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+							<path d="M12.5309 5.14V4.36C12.3042 4.33333 12.0909 4.29333 11.8909 4.24C11.6909 4.18667 11.4842 4.11333 11.2709 4.02C11.0575 3.92667 10.8575 3.82667 10.6709 3.72C10.4842 3.6 10.2975 3.44667 10.1109 3.26L8.17086 1.34L9.41086 0.14L15.2509 6L9.41086 11.88L8.17086 10.66L10.0309 8.82C10.2575 8.60667 10.4775 8.43333 10.6909 8.3C10.9042 8.16667 11.1175 8.06 11.3309 7.98C11.5309 7.9 11.7309 7.83333 11.9309 7.78C12.1309 7.71333 12.3309 7.67333 12.5309 7.66V6.88L0.0308594 6.88L0.0308594 5.14L12.5309 5.14Z" fill="white"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+
+			<div class="card">
+				<h2>Experiencing a Breach?</h2>
+				<p>Find answers through our Help Center, give us a call, or submit a ticket. At SentinelOne we are always-on and here to help.</p>
+
+				<div class="cta-wrap">
+					<a class="cta wow fadeIn dark dot arrow" href="https://www.sentinelone.com/contact/">
+						<span>Get Support Now</span>
+						<div>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12" fill="none">
+								<path d="M12.5309 5.14V4.36C12.3042 4.33333 12.0909 4.29333 11.8909 4.24C11.6909 4.18667 11.4842 4.11333 11.2709 4.02C11.0575 3.92667 10.8575 3.82667 10.6709 3.72C10.4842 3.6 10.2975 3.44667 10.1109 3.26L8.17086 1.34L9.41086 0.14L15.2509 6L9.41086 11.88L8.17086 10.66L10.0309 8.82C10.2575 8.60667 10.4775 8.43333 10.6909 8.3C10.9042 8.16667 11.1175 8.06 11.3309 7.98C11.5309 7.9 11.7309 7.83333 11.9309 7.78C12.1309 7.71333 12.3309 7.67333 12.5309 7.66V6.88L0.0308594 6.88L0.0308594 5.14L12.5309 5.14Z" fill="white"></path>
+							</svg>
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container--whyte">
+			<div class="inner">
+				<div class="footer-legal">
+					<div class="copyright">©2025 SentinelOne, All Rights Reserved</div>
+					<div class="footer-link-wrapper">
+						<a href="https://www.sentinelone.com/legal/privacy-notice/" class="footer-link">Privacy Policy</a>
+						<a href="https://www.sentinelone.com/legal/" class="footer-link">Terms of Service</a>
+					</div>
+				</div>
+
+				<div class="footer-logo-container">
+					<div class="footer-logo-wrapper">
+						<a href="/">
+							<svg xmlns="http://www.w3.org/2000/svg" width="240" height="46" viewBox="0 0 240 46" fill="none">
+								<g clip-path="url(#clip0_530_17508)">
+									<path d="M63.325 20.7693C59.411 20.0243 57.5195 19.6194 57.5195 17.6905C57.5195 15.8636 59.1082 14.9485 61.2651 14.9485C63.7316 14.9485 65.2489 16.3382 65.4547 18.3335H70.4539C70.3519 13.7986 66.841 10.8882 61.2719 10.8882C55.7028 10.8882 52.4573 13.8683 52.4573 18.0664C52.4573 22.8718 55.9359 24.1271 59.9519 24.9045C63.9017 25.6835 65.8289 26.0867 65.8289 28.0837C65.8289 29.9446 64.1058 30.9583 61.7788 30.9583C58.8769 30.9583 57.0534 29.3662 56.885 27.0664L51.8892 27.0001C51.9555 31.8055 55.7045 34.988 61.7159 34.988C67.2526 34.988 70.8979 31.9449 70.9336 27.5087C70.9336 22.7374 67.353 21.5161 63.3369 20.7744L63.3233 20.7659V20.771L63.325 20.7693Z" fill="black" />
+									<path d="M101.754 17.1767C99.0565 17.1767 97.2908 19.1788 96.4998 21.5585H95.2479L96.3536 19.0717C96.5883 18.5426 96.7108 17.9711 96.7108 17.3928H91.2642V34.7804H96.0389V25.8774C96.0389 22.8649 97.4609 21.1027 99.9308 21.1027C102.401 21.1027 103.45 22.6608 103.45 25.6035V34.777H108.225V25.0269C108.225 19.104 105.347 17.1733 101.759 17.1733H101.758L101.754 17.1767Z" fill="black" />
+									<path d="M140.544 17.1767C137.846 17.1767 136.081 19.1788 135.29 21.5585H134.038L135.143 19.0717C135.378 18.5426 135.501 17.9711 135.501 17.3928H130.052V34.7804H134.827V25.8774C134.827 22.8649 136.249 21.1027 138.719 21.1027C141.189 21.1027 142.238 22.6608 142.238 25.6035V34.777H147.013V25.0269C147.013 19.104 144.135 17.1733 140.546 17.1733H140.544V17.1767Z" fill="black" />
+									<path d="M127.606 17.3911H122.816V34.7788H127.608V17.3911H127.606Z" fill="black" />
+									<path d="M172.565 10.4221L167.804 12.8239V34.7805H172.565V10.4221Z" fill="black" />
+									<path d="M127.608 11.2878H122.816V16.0796H127.608V11.2878Z" fill="black" />
+									<path d="M116.616 17.391V11.23L111.853 13.6318V17.391H108.985V21.4122H111.853V32.2272C111.853 33.6356 112.996 34.7787 114.405 34.7787H120.6V30.7541H116.616V21.4122H120.6V17.391H116.616Z" fill="black" />
+									<path d="M148.5 26.1121C148.5 20.6961 152.053 17.1768 157.435 17.1768C162.817 17.1768 166.168 20.4257 166.202 25.5372C166.202 26.0441 166.168 26.6207 166.066 27.1617H153.475V27.3981C153.577 29.8697 155.167 31.358 157.571 31.358C159.466 31.358 160.82 30.5126 161.26 28.8865H165.965C165.425 32.2715 162.412 34.9795 157.741 34.9795C151.953 34.9795 148.5 31.4924 148.5 26.1104V26.1121ZM161.397 24.0471C161.092 21.9141 159.602 20.7302 157.471 20.7302C155.339 20.7302 153.849 21.9821 153.579 24.0471H161.398H161.397Z" fill="black" />
+									<path d="M211.911 17.1767C209.213 17.1767 207.448 19.1788 206.657 21.5585H205.405L206.511 19.0717C206.745 18.5426 206.868 17.9711 206.868 17.3928H201.419V34.7804H206.194V25.8774C206.194 22.8649 207.616 21.1027 210.086 21.1027C212.556 21.1027 213.605 22.6608 213.605 25.6035V34.777H218.38V25.0269C218.38 19.104 215.502 17.1733 211.913 17.1733H211.911V17.1767Z" fill="black" />
+									<path d="M219.867 26.1121C219.867 20.6961 223.42 17.1768 228.802 17.1768C234.184 17.1768 237.535 20.4257 237.569 25.5372C237.569 26.0441 237.535 26.6207 237.433 27.1617H224.842V27.3981C224.944 29.8697 226.535 31.358 228.938 31.358C230.833 31.358 232.187 30.5126 232.628 28.8865H237.333C236.792 32.2715 233.779 34.9795 229.108 34.9795C223.32 34.9795 219.867 31.4924 219.867 26.1104V26.1121ZM232.764 24.0471C232.459 21.9141 230.969 20.7302 228.838 20.7302C226.706 20.7302 225.216 21.9821 224.946 24.0471H232.765H232.764Z" fill="black" />
+									<path d="M72.1245 26.1121C72.1245 20.6961 75.6779 17.1768 81.0599 17.1768C86.4419 17.1768 89.7929 20.4257 89.8269 25.5372C89.8269 26.0441 89.7929 26.6207 89.6908 27.1617H77.1V27.3981C77.202 29.8697 78.7925 31.358 81.196 31.358C83.0909 31.358 84.4449 30.5126 84.8855 28.8865H89.5904C89.0495 32.2715 86.037 34.9795 81.3661 34.9795C75.5776 34.9795 72.1245 31.4924 72.1245 26.1104V26.1121ZM85.0215 24.0471C84.7171 21.9141 83.227 20.7302 81.0956 20.7302C78.9643 20.7302 77.4742 21.9821 77.2037 24.0471H85.0232H85.0215Z" fill="black" />
+									<path d="M187.73 34.983C180.761 34.983 175.714 29.8408 175.714 22.9381C175.714 16.0355 180.761 10.8933 187.73 10.8933C194.699 10.8933 199.821 16.0355 199.821 22.9381C199.821 29.8408 194.699 34.983 187.73 34.983ZM187.73 30.6862C191.688 30.6862 194.61 27.405 194.61 22.9381C194.61 18.4713 191.688 15.1901 187.73 15.1901C183.772 15.1901 180.89 18.4713 180.89 22.9381C180.89 27.405 183.738 30.6862 187.73 30.6862Z" fill="black" />
+									<path d="M237.71 16.2361H238.335C238.672 16.2361 238.898 16.4351 238.898 16.7464C238.898 16.9437 238.796 17.1002 238.636 17.1767L238.939 17.767H238.575L238.316 17.2533H238.04V17.767H237.712V16.2344L237.71 16.2361ZM238.039 16.5082V16.9794H238.308C238.462 16.9794 238.561 16.8876 238.561 16.7447C238.561 16.6018 238.462 16.5082 238.308 16.5082H238.039Z" fill="black" />
+									<path d="M238.265 18.5698C237.416 18.5698 236.727 17.8792 236.727 17.0321C236.727 16.185 237.418 15.4944 238.265 15.4944C239.112 15.4944 239.802 16.185 239.802 17.0321C239.802 17.8792 239.112 18.5698 238.265 18.5698ZM238.265 15.8227C237.598 15.8227 237.055 16.3653 237.055 17.0321C237.055 17.6989 237.598 18.2415 238.265 18.2415C238.932 18.2415 239.474 17.6989 239.474 17.0321C239.474 16.3653 238.932 15.8227 238.265 15.8227Z" fill="black" />
+									<path d="M18.4663 9.10208L36.6313 18.1838V9.08337L18.4663 0V9.10208Z" fill="url(#paint0_linear_530_17508)" />
+									<path d="M18.4663 36.308L36.6313 27.2246V36.3267L18.4663 45.4101V36.308Z" fill="url(#paint1_linear_530_17508)" />
+									<path d="M18.4663 9.10208L0.30127 18.1838V9.08337L18.4663 0V9.10208Z" fill="url(#paint2_linear_530_17508)" />
+									<path d="M18.4663 36.308L0.30127 27.2246V36.3267L18.4663 45.4101V36.308Z" fill="url(#paint3_linear_530_17508)" />
+									<path d="M4.83936 20.4411L22.9908 29.5176L32.0878 24.9658L13.9448 15.8943L4.83936 20.4411Z" fill="url(#paint4_linear_530_17508)" />
+								</g>
+								<defs>
+									<linearGradient id="paint0_linear_530_17508" x1="36.5038" y1="13.5757" x2="18.4578" y2="4.54168" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#4500B6" />
+										<stop offset="1" stop-color="#6100FF" />
+									</linearGradient>
+									<linearGradient id="paint1_linear_530_17508" x1="36.5038" y1="31.8343" x2="18.4578" y2="40.8684" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#4500B6" />
+										<stop offset="1" stop-color="#6100FF" />
+									</linearGradient>
+									<linearGradient id="paint2_linear_530_17508" x1="0.428845" y1="13.5757" x2="18.4748" y2="4.54168" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#6100FF" />
+										<stop offset="1" stop-color="#4500B6" />
+									</linearGradient>
+									<linearGradient id="paint3_linear_530_17508" x1="0.428845" y1="31.8343" x2="18.4748" y2="40.8684" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#6100FF" />
+										<stop offset="1" stop-color="#4500B6" />
+									</linearGradient>
+									<linearGradient id="paint4_linear_530_17508" x1="28.155" y1="27.5547" x2="8.6258" y2="17.7773" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#6100FF" />
+										<stop offset="1" stop-color="#4500B6" />
+									</linearGradient>
+									<clipPath id="clip0_530_17508">
+										<rect width="240" height="45.41" fill="white" />
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+					</div>
+				</div>
+
+				<div class="social-icons">
+					<a href="https://twitter.com/SentinelOne" class="social-icon" aria-label="Twitter">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.31742 6.77491L15.1457 0H13.7646L8.70389 5.88256L4.66193 0H0L6.11224 8.89547L0 16H1.38119L6.72542 9.78782L10.994 16H15.656L9.31708 6.77491H9.31742ZM7.42569 8.97384L6.80639 8.08805L1.87886 1.03974H4.00029L7.97687 6.72795L8.59617 7.61374L13.7652 15.0075H11.6438L7.42569 8.97418V8.97384Z" fill="#0B0C1B"></path>
+						</svg>
+					</a>
+					<a href="https://www.facebook.com/SentinelOne/" class="social-icon" aria-label="Facebook">
+						<svg width="8" height="16" viewBox="0 0 8 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.03092 16L5.04234 9.0876H7.33845C7.54488 9.0876 7.71882 8.92695 7.74312 8.71373L7.99711 6.48557C8.02587 6.2335 7.83646 6.01195 7.59243 6.01195H5.03092V4.14806C5.03092 3.30279 5.25665 2.72681 6.42233 2.72681L7.50183 2.72629C7.72673 2.72615 7.90914 2.53649 7.90914 2.30254V0.42375C7.90914 0.189706 7.7266 0 7.5016 0H5.74265C3.59909 0 2.13154 1.36045 2.13154 3.85894V6.0119H0.407543C0.18186 6.0119 -0.000861628 6.2026 3.05632e-06 6.43726L0.00828583 8.66541C0.009105 8.8988 0.191326 9.08751 0.41578 9.08751H2.14292L2.1315 15.9999L5.03092 16Z" fill="#0B0C1B"></path>
+						</svg></a>
+					<a href="https://www.linkedin.com/company/sentinelone/" class="social-icon" aria-label="LinkedIn">
+						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3369 4.64286C1.04628 4.64286 0 3.60351 0 2.32143C0 1.03935 1.04628 0 2.3369 0C3.62753 0 4.67381 1.03935 4.67381 2.32143C4.67381 3.60351 3.62759 4.64286 2.3369 4.64286ZM17 16.4722C17 16.7636 16.762 17 16.4687 17H13.829C13.5356 17 13.2977 16.7636 13.2977 16.4722V11.6674C13.2977 11.6146 13.2989 11.5526 13.3001 11.4829C13.3164 10.6066 13.3548 8.52655 11.4121 8.52655C9.78528 8.52655 9.45531 10.1858 9.38905 10.9304V16.4722C9.38905 16.7636 9.1512 17 8.85772 17H6.30475C6.01133 17 5.77342 16.7636 5.77342 16.4722V6.13621C5.77342 5.84479 6.01133 5.60846 6.30475 5.60846H8.85772C9.15114 5.60846 9.38905 5.84479 9.38905 6.13621V7.02994C9.99227 6.13068 10.8887 5.43658 12.7975 5.43658C17.0004 5.43658 17.0001 9.31512 17 11.4779V11.5145V16.4722ZM3.56685 17C3.88601 17 4.14472 16.743 4.14472 16.4259V6.18251C4.14472 5.86546 3.88601 5.60846 3.56685 5.60846H1.10696C0.787799 5.60846 0.529088 5.86546 0.529088 6.18251V16.4259C0.529088 16.743 0.787799 17 1.10696 17H3.56685Z" fill="#0B0C1B"></path>
+						</svg></a>
+					<a href="https://goo.gl/e5C9f4" class="social-icon" aria-label="YouTube">
+						<svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4.36143 0H16.6386C19.0473 0 21 2.10246 21 4.69598V11.304C21 13.8975 19.0473 16 16.6386 16H4.36143C1.95268 16 0 13.8975 0 11.304V4.69598C0 2.10246 1.95268 0 4.36143 0ZM7.94655 11.2704L13.6891 8.32151C13.8618 8.23283 13.8648 7.9692 13.6941 7.87606L7.95152 4.74287C7.79818 4.6592 7.61679 4.77917 7.61679 4.96427V11.0463C7.61679 11.2288 7.79354 11.349 7.94655 11.2704Z" fill="#0B0C1B"></path>
+						</svg></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-7f7a0b93139dcf56f90","applicationID":"773889139","transactionName":"ZlwDMkMCWxJQUkdYXF8WIAVFCloPHgUDBQ==","queueTime":0,"applicationTime":628,"atts":"ShsARAsYSBw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>

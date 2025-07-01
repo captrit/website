@@ -1,0 +1,56 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.1">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="100" x2="1440" y2="100" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1440" y2="200" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1440" y2="300" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1440" y2="400" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1440" y2="500" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="1440" y2="600" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="0" y1="700" x2="1440" y2="700" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="0" y1="800" x2="1440" y2="800" stroke="#45C6F5" stroke-width="0.5"/>
+    
+    <!-- Vertical lines -->
+    <line x1="100" y1="0" x2="100" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="500" y1="0" x2="500" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="1100" y1="0" x2="1100" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="1200" y1="0" x2="1200" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="1300" y1="0" x2="1300" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    <line x1="1400" y1="0" x2="1400" y2="900" stroke="#45C6F5" stroke-width="0.5"/>
+    
+    <!-- Binary code pattern -->
+    <text x="120" y="120" fill="#45C6F5" opacity="0.3" font-family="monospace" font-size="10">01001</text>
+    <text x="320" y="220" fill="#45C6F5" opacity="0.3" font-family="monospace" font-size="10">10110</text>
+    <text x="520" y="320" fill="#45C6F5" opacity="0.3" font-family="monospace" font-size="10">01101</text>
+    <text x="720" y="420" fill="#45C6F5" opacity="0.3" font-family="monospace" font-size="10">11010</text>
+    <text x="920" y="520" fill="#45C6F5" opacity="0.3" font-family="monospace" font-size="10">00101</text>
+    <text x="1120" y="620" fill="#45C6F5" opacity="0.3" font-family="monospace" font-size="10">10010</text>
+    <text x="220" y="720" fill="#45C6F5" opacity="0.3" font-family="monospace" font-size="10">01100</text>
+    
+    <!-- Connection nodes -->
+    <circle cx="100" cy="100" r="3" fill="#45C6F5" opacity="0.5"/>
+    <circle cx="300" cy="200" r="3" fill="#45C6F5" opacity="0.5"/>
+    <circle cx="500" cy="300" r="3" fill="#45C6F5" opacity="0.5"/>
+    <circle cx="700" cy="400" r="3" fill="#45C6F5" opacity="0.5"/>
+    <circle cx="900" cy="500" r="3" fill="#45C6F5" opacity="0.5"/>
+    <circle cx="1100" cy="600" r="3" fill="#45C6F5" opacity="0.5"/>
+    <circle cx="200" cy="700" r="3" fill="#45C6F5" opacity="0.5"/>
+    
+    <!-- Connection lines -->
+    <line x1="100" y1="100" x2="300" y2="200" stroke="#45C6F5" stroke-width="0.5" opacity="0.3"/>
+    <line x1="300" y1="200" x2="500" y2="300" stroke="#45C6F5" stroke-width="0.5" opacity="0.3"/>
+    <line x1="500" y1="300" x2="700" y2="400" stroke="#45C6F5" stroke-width="0.5" opacity="0.3"/>
+    <line x1="700" y1="400" x2="900" y2="500" stroke="#45C6F5" stroke-width="0.5" opacity="0.3"/>
+    <line x1="900" y1="500" x2="1100" y2="600" stroke="#45C6F5" stroke-width="0.5" opacity="0.3"/>
+    <line x1="1100" y1="600" x2="200" y2="700" stroke="#45C6F5" stroke-width="0.5" opacity="0.3"/>
+    <line x1="200" y1="700" x2="100" y2="100" stroke="#45C6F5" stroke-width="0.5" opacity="0.3"/>
+  </g>
+</svg> 
