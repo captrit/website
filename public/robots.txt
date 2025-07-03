@@ -1,9 +1,2 @@
-# *
 User-agent: *
-
-# Host
-Host: https://captrit.ae
-
-# Sitemaps
-Sitemap: https://captrit.ae/sitemap.xml
-#gg
+Disallow: /
