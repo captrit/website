@@ -1,3 +1,4 @@
+// Trigger redeploy: random comment for staging visibility
 'use client';
 
 import React from 'react';
@@ -80,7 +81,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="font-bold text-black text-sm uppercase tracking-wider">Location.</h3>
+              <h3 className="font-bold text-black text-sm uppercase tracking-wider">OFFICE.</h3>
               <ul className="mt-4 space-y-3 text-sm text-gray-400">
                 <li>
                   Office C1‑1F‑SF10950, C1 Building,
