@@ -1,3 +1,4 @@
+// Trigger redeploy: random comment for staging visibility
 'use client';
 
 import React from 'react';
